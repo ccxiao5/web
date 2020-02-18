@@ -1,0 +1,53 @@
+a{
+	&:hover{
+		cursor: pointer;
+	}
+}
+.active{
+	background-color: white;
+    color: #ff7800 !important;
+}
+div.list {
+	&:hover{
+		border: 1px solid #685479;
+	}
+}
+.nav-chw{
+	overflow: hidden;
+	padding-top: 5%;
+	background-color: #685479;
+	&>div{
+		float: left;
+	    width: 50%;
+	    height: 50px;
+	    padding-top: 3%;
+	    text-align: center;
+	    line-height: 2;
+	    font-size: 14px;
+	    color: white;
+	    cursor: pointer;
+	    &:hover{
+	    	background-color: white;
+    		color: #ff7800;
+	    }
+	}
+}
+.glyphicon-time
+{
+	color:#ff7800;
+	p{
+		color:#999;
+	}
+}
+.content
+{
+	div p{
+		display: inline-block;
+    	margin-top: 10px;
+	}
+	&-chw div{
+		border-bottom:1px solid #ddd ;
+    	margin:0 20px 20px 20px;
+    	padding-bottom: 10px;
+	}
+}
