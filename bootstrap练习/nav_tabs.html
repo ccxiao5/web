@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>tabs</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div>
+    <!--data-toggle="tab"和data-toggle="pill"两种表明我这个打开方式是tab切换
+     ！！！！！！！！要有切换隐藏内容必须要在内容div中加入tab-pane!!!!!!!
+    ！！！！！！！！！最重要的是他们都要放在tab-content中！！！！！！！！！！！-->
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" >
+        <li  class="active">
+            <a href="#home" data-toggle="tab">Home</a>
+        </li>
+        <li >
+            <a href="#profile" data-toggle="tab">Profile</a></li>
+        <li>
+            <a href="#messages" data-toggle="tab">Messages</a>
+        </li>
+        <li >
+            <a href="#settings" data-toggle="tab">Settings</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div  class="tab-pane active" id="home">程虎威</div>
+        <div  class="tab-pane"  id="profile">信息</div>
+        <div  class="tab-pane" id="messages">树莓</div>
+        <div  class="tab-pane" id="settings">计网</div>
+    </div>
+
+</div>
+
+</body>
+</html>
