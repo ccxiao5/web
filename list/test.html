@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>list_test</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <DIV style="width: 100%">
+        <div class="list" style="width: 20%;margin: 10px auto;">
+            <div class="nav-chw">
+                <div class="title1 active">综合新闻</div>
+                <div class="title2">媒体清华</div>
+            </div>
+            <div class="content" style="clear:both;">
+                <div class="content-chw content1">
+                    <div class="list1">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.15</p></span>
+                        <p><a>清华大学共青团寒假读书班暨工作研讨会举行</a></p>
+                    </div>
+                    <div class="list2">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.15</p></span>
+                        <p><a>清华医学院祁海教授荣获2018美国免疫学家协会研究者奖</a></p>
+                    </div>
+                    <div class="list3">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.13</p></span>
+                        <p><a>清华大学举行教代会代表征求意见座谈会</a></p>
+                    </div>
+                    <div class="list4">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.13</p></span>
+                        <p><a>国务院副总理刘延东考察清华大学</a></p>
+                    </div>
+                </div>
+                <div class="content-chw content2" style="display: none;">
+                    <div class="list1">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.12</p></span>
+                        <p><a>清这个项目何以赢得百万创业大奖？</a></p>
+                    </div>
+                    <div class="list2">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.12</p></span>
+                        <p><a>首届中华礼服设计方案学术研讨会召开</a></p>
+                    </div>
+                    <div class="list3">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.12</p></span>
+                        <p><a>强强联合：麻省理工-清华大学共建未来城市创新网络</a></p>
+                    </div>
+                    <div class="list4">
+                        <span class="glyphicon glyphicon-time"><p>&nbsp;2018.01.11</p></span>
+                        <p><a>独上高楼，望尽天涯路——纪念王国维诞辰140周年</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </DIV>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $(".nav-chw div").hover(function () {
+                debugger;
+                var $temp=$(event.target);
+                if($temp.hasClass("title1"))
+                {
+                    $(".title2").removeClass("active");
+                    $(".title1").addClass("class","active");
+                    $(".content1").css("display","block");
+                    $(".content2").css("display","none");
+                }
+                else
+                {
+                    $(".title1").removeClass("active");
+                    $(".title2").addClass("class","active");
+                    $(".content1").css("display","none");
+                    $(".content2").css("display","block");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
