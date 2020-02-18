@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>modal</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/chw_modal.css">
+</head>
+<body>
+<button type="button" class="btn btn-default" style="display: block;margin: 20px auto;">Click me!</button>
+<div class="chw-dialog">
+    <div class="chw-modal">
+        <div class="chw-title">
+            <button type="button" class="close">
+                <span>&times;</span>
+            </button>
+            <h4>chw-Modal title</h4>
+        </div>
+        <div class="chw-content">
+            <p>fantasy baby</p>
+        </div>
+        <div class="chw-footer">
+             <button class="btn btn-info">Save changes</button>
+            <button class="btn btn-default">Close</button>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+    $("body>button").on('click',function () {
+        var temp = "<div class='chw-panel'></div>";
+        $("body").append(temp);
+        $(".chw-dialog").css("display","block");
+        setTimeout(function(){
+            $(".chw-panel").css("opacity","0.5");
+            $(".chw-dialog").css("opacity","1");
+            $(".chw-modal").css( "transform","translate(0,0)");
+        },1);
+    });
+    $('.chw-dialog').on('click',function(){
+        debugger;
+        $(".chw-panel").css("opacity","0");
+        $(".chw-dialog").css("opacity","0");
+        $(".chw-modal").css( "transform","translate(0,-25%)");
+        setTimeout(function () {
+            $(".chw-dialog").hide();
+            $(".chw-panel").remove();
+        },1);
+    });
+    $(".chw-modal").click(function (e) {
+        e.stopPropagation();
+        return false;
+    });
+    $(".close").click(function () {
+        $(".chw-panel").css("opacity","0");
+        $(".chw-dialog").css("opacity","0");
+        $(".chw-modal").css( "transform","translate(0,-25%)");
+        setTimeout(function () {
+            $(".chw-dialog").hide();
+            $(".chw-panel").remove();
+        },1);
+
+    });
+</script>
+</body>
+</html>
