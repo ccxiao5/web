@@ -1,0 +1,165 @@
+
+.navbar-default
+{
+    background-color: #FFF !important;
+}
+.navbar
+{
+    border: 0px;
+}
+.navbar-default .navbar-toggle
+{
+    border-color: #ff6600 !important;
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+    background-color:#ff6600 !important;
+}
+#collapse-1 a:hover{
+    color: white !important;
+    background-color: #ff6600 !important;
+}
+
+body
+{
+    position: relative;
+    overflow-y:scroll;
+}
+/*section_1*/
+.section_1>.title
+{
+    padding: 10px 8% 5px 8%;
+    margin-bottom: 0;
+}
+.navbar-header
+{
+    margin-left: 40px;
+    font-size: 18px;
+    color: #ff6600;
+}
+.navbar-header>span
+{
+    margin-left:20px;
+}
+#content
+{
+    height: 80px;
+    background: url("../picture/bg_min.jpg");
+    background-size: cover;
+}
+/*header*/
+.header
+{
+    border-bottom: 1px solid #dddddd;
+    clear: both;
+    overflow: hidden;
+}
+.header-name
+{
+    height: 70px;
+    width: 20%;
+    margin-left: 7%;
+    padding-top: 2%;
+}
+.tip{
+    float: right;
+    height: 70px;
+    padding: 25px 15px;
+}
+.tip:hover
+{
+    cursor:default;
+}
+.tips3{
+    margin-right: 8%;
+}
+/*section_2*/
+.section_2
+{
+    float: left;
+    width: 70%;
+    padding: 2% 2% 1% 5%;
+    border-right:1px dashed #dddddd;
+}
+.section_2 .media:hover
+{
+    cursor: pointer;
+    border-bottom :1px solid #ff6600;
+}
+.section_2 .media
+{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-bottom: 1px dashed #dddddd;
+}
+.section_2 .media-left
+{
+    padding-right: 20px;
+}
+.section_2 .media-left h2
+{
+    margin-top: 0;
+    color:#ff6600;
+}
+.section_2 .media-left p
+{
+    margin: 0;
+}
+.section_2 .media-body h4
+{
+    color: #474545;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.section_2 .media-body p
+{
+    color: #746969;
+}
+/*section_3*/
+.section_3
+{
+    float:right;
+    width: 30%;
+    padding-left: 1%;
+}
+.section_3 .list
+{
+    height: auto;
+    padding-left: 1%;
+    border-left: 2px solid transparent;
+    border-bottom: 1px dashed #dddddd;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+.section_3 .list:hover
+{
+    border-left: 2px solid #ff6600;
+}
+.section_3 .list a
+{
+    display: block;
+    background-color: white !important;
+    text-decoration: none;
+    color: black;
+}
+.section_3 .list1
+{
+    margin-top: 10%;
+}
+/*footer*/
+.footer
+{
+    clear: both;
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-top: 1px dashed #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+.footer p{
+    font-size: 15px;
+}
