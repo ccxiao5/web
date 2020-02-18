@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>hello bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/alert.js"></script>
+    <style>
+        .work
+        {
+            width:500px;
+            margin: 0 auto;
+        }
+        .glyphicon
+        {
+            background-color: transparent;
+            top: 0;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<div class="work">
+    <fieldset class="col-sm-12">
+        <form  style="width:300px;margin: 0 auto;border: 1px solid #ddd">
+            <ul class="nav nav-tabs" style="text-align: center;" >
+                <li   style="width: 149px;">
+                    <a href="#QR" data-toggle="tab">二维码登录</a>
+                </li>
+                <li class="active" style="width: 149px; border-right: 0;">
+                    <a href="#user_pwd" data-toggle="tab" style="margin-right: 0;">账号邮箱登录</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="user_pwd" class="user_pwd tab-pane active" >
+                    <div class="form-group input-group" style="margin-top:30px; margin-left: auto; margin-right: auto;">
+                        <div class="col-sm-11 input-group">
+                            <span class="input-group-addon glyphicon glyphicon-user" style=""></span>
+                            <input type="email" class="form-control" placeholder="邮箱号">
+                                    <!--<span class="input-group-addon" style="right: 90px;">@163.com</span>-->
+                        </div>
+                    </div>
+                    <div class="form-group input-group" style="margin-left: auto; margin-right: auto;">
+                        <div class="col-sm-11 input-group">
+                            <span  class="input-group-addon glyphicon glyphicon-lock"></span>
+                            <input type="password" class="form-control" placeholder="密码" >
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left: 30px;" >
+                        <div class="checkbox" >
+                            <label >
+                                <input type="checkbox">十天内免登陆
+                            </label>
+                            <label style="margin-left: 20px;">
+                                <a>忘记密码？</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group " >
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-primary" href="#" style=" width: 100px;">登录</a>
+                        <a class="btn btn-info" href="#" style="margin-left:20px;width: 100px;">去注册</a>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox ">
+                            <label>版本：</label>
+                            <label class="dropdown" style="padding-left: 0;">
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: 0;padding-left: 0;">默认版本<span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a>默认版本</a></li>
+                                        <li ><a>网易邮箱6.0</a></li>
+                                        <li ><a>网易邮箱6.0简约版</a></li>
+                                    </ul>
+                            </label>
+                            <label style="margin-left: 20px;">
+                                <input type="checkbox" checked="checked" >全程ssl
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="QR" class="QR tab-pane">
+                    <div class="header" style="text-align: center">
+                       <h3>网易邮箱大师<small>手机版扫码登录</small></h3>
+                        <p >官方APP更安全 <a>立即下载</a></p>
+                    </div>
+                    <div style="margin: 30px 60px;">
+                        <img src="QR.jpg" class="img-responsive">
+                    </div>
+                    <div class="media" style="margin-left: 20px; margin-bottom: 40px;">
+                        <div class="media-left">
+                            <img src="logo.png" >
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading" style="color:#626262">网易邮箱大师电脑版</h4>
+                            <p style="color: #949494;margin-bottom: 0;">登录更便捷，工作更高效</p>
+                            <a>立即下载>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </fieldset>
+</div>
+</body>
+</html>
