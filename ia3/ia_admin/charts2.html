@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>结果分析</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+    <link rel="stylesheet" href="assets/css/amazeui.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/core.css" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/page/typography.css" />
+    <link rel="stylesheet" href="assets/css/page/form.css" />
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/theme/grid.js"></script>
+    
+    
+
+  </head>
+  
+  <body>
+   <div id="container2">
+    </div> 
+
+   <div id="container">
+    </div> 
+    <div id="container4">
+    </div>
+    
+    <div id="container3">
+    </div>
+    <div id="container7">
+    </div>
+    <div class="am-cf">
+              <div class="am-fr">
+                <ul class="am-pagination">
+                  <li class="am-disabled"><a href="#">«</a></li>
+                  <li ><a href="table1re.php">1</a></li>
+                  <li class="am-active"><a href="#">2</a></li>                
+                  <li><a href="#">»</a></li>
+                </ul>
+              </div>
+            </div>
+  </body>
+</html>
+<script>
+var chart;
+$(document).ready(function() {
+
+//柱状图图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container2',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'column'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                     text: '专家意见集中程度'
+                },
+               subtitle: {
+                      text: '用算术平均数、满分频度表示专家意见集中程度'
+                },
+                xAxis: {//X轴数据
+                    categories: ['问题1', '问题2', '问题3', '问题4', '问题5', '问题6', '问题7', '问题8', '问题9', '问题10', '问题11', '问题12'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '专家意见集中程度'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) ;
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [
+                {
+                    name: '算数平均数',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9,1]
+                }, 
+                {
+                    name: '满分频度',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9,1]
+                }
+                ]
+              });
+
+//饼状图图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container3',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'pie'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                title: {
+                    text: '满分占比'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['问题1', '问题2', '问题3', '问题4', '问题5', '问题6', '问题7', '问题8', '问题9', '问题10', '问题11', '问题12'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '%'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        //return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) +'%';
+                        return Highcharts.numberFormat(this.y, 1) +'%';
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [
+                {
+                   data: [
+                        ['问题1', 8.0],
+                        ['问题2', 9.8],
+                        ['问题3', 8.5],
+                        ['问题4', 6.2],
+                        ['问题5', 10.8],
+                        ['问题6', 16.8],
+                        //{ name: '问题7', y: 60, sliced: true, selected: true }, //选中状态
+                        //{ name: '问题8', y: 65, sliced: true, selected: true }, //选中状态
+                        ['问题5', 36],
+                        ['问题6', 29],
+                        ['问题9', 6.2],
+                        ['问题10', 7.0],
+                        ['问题11', 8.5],
+                        ['问题12', 6.2]
+                     ]
+                }
+                ]
+              });
+//spline 平滑曲线图示例
+chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container',          //放置图表的容器
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    defaultSeriesType: 'spline'   //图表类型line, spline, area, areaspline, column, bar, pie , scatter 
+                },
+                 title: {
+                    text: '专家意见协调程度'
+                },
+                subtitle: {
+                              text: '用变异系数、肯德尔协调系数表示专家意见协调程度'
+                }, 
+                xAxis: {//X轴数据
+                    categories: ['问题1', '问题2', '问题3', '问题4', '问题5', '问题6', '问题7', '问题8', '问题9', '问题10', '问题11', '问题12'],
+                    labels: {
+                        rotation: -45, //字体倾斜
+                        align: 'right',
+                        style: { font: 'normal 13px 宋体' }
+                    }
+                },
+                yAxis: {//Y轴显示文字
+                    title: {
+                        text: '专家意见协调程度'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    formatter: function() {
+                        return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1) ;
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: true//是否显示title
+                    }
+                },
+                series: [{
+                    name: '变异系数',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6, 9.6, 9.6]
+                }, {
+                    name: '肯德尔协调系数',
+                    data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6, 9.6, 9.6]
+                }]
+              });
+
+}); 
+</script>
